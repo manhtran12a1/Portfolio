@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Manh<span>Tran</span></a>
+        
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <button class="visit-btn">Visit GitHub</button>
+    </header>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <img src="/img/IMG_20190930_190227.jpg" alt="Profile Image">
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Trần Quang Mạnh</h1>
+                    <span>STEM Educator & Programmer</span>
+                    <p>I am an experienced candidate in the STEM field, studied at Can Tho University. My professional skills have been honed through practical experience and reinforced by a solid theoretical foundation. I have accumulated valuable experience through short-term work at various schools, specializing in programming and algorithms.</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn">Download CV</button>
+                    <button class="btn">Contact</button>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <h2 class="section-title">Experience & Education</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>STEM Teaching Assistant (08/2020 - 02/2021)</span>
+                    <p><strong>Faculty of Education - Can Tho University</strong><br>Provided technical support, guided Micro:bit programming, created a friendly learning environment, and developed instructional materials for learners.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>STEM Teacher (11/2020 - 02/2021)</span>
+                    <p><strong>Faculty of Education - Can Tho University</strong><br>Built STEM education curriculum, applied creative teaching methods, and taught embedded Micro:bit programming to high school students.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Bachelor's Degree - Engineering/Computer Science</span>
+                    <p><strong>Can Tho University (2025)</strong><br>Participated in social activities and STEM training programs, focused on programming education for high school students.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Technical Skills</span>
+                    <p><strong>Programming:</strong> C, Scratch, Micro:bit, Web Backend<br><strong>Other:</strong> Office Software, Logical Thinking, Robotics, Arduino</p>
+                </div>
+                </div>
+            <img src="img/74841942_1505176466299901_3208264360212299776_n.jpg" alt="Experience">
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+
+    <div class="project-card">
+        <div class="project-icon">
+            <i class="fa-solid fa-house-signal"></i>
+        </div>
+        <h3>Smart Home System</h3>
+        <p>Niên luận khoa học cá nhân. Hệ thống nhà thông minh cho phép bật/tắt thiết bị gia dụng từ xa bằng giọng nói qua Google Assistant. Lập trình vi điều khiển xử lý tín hiệu thông qua giao thức MQTT, kết nối IFTTT và máy chủ Adafruit IO.</p>
+        <div class="tech-tags">
+            <span class="tag">C/C++</span>
+            <span class="tag">ESP8266</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">IoT</span>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-icon">
+            <i class="fa-solid fa-cloud-showers-water"></i>
+        </div>
+        <h3>Automated Misting System</h3>
+        <p>Dự án tự động hóa không gian mở. Thiết kế hệ thống làm mát thông minh tự động kích hoạt máy bơm nước dựa trên thuật toán phân tích dữ liệu thực tế từ các cảm biến môi trường (nhiệt độ, độ ẩm, ánh sáng).</p>
+        <div class="tech-tags">
+            <span class="tag">Micro:bit</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">Automation</span>
+        </div>
+    </div>
+
+ <div class="project-card">
+        <div class="project-icon">
+            <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <h3>Quản lý Kho hàng</h3>
+        <p>Ứng dụng web quản lý sản phẩm kho hàng hỗ trợ các nghiệp vụ quản lý (thêm/sửa/xóa), lọc danh mục và xác thực người dùng. Xây dựng hệ thống Backend RESTful API bằng PHP kết hợp PDO để bảo mật truy vấn MySQL, Frontend xử lý bất đồng bộ qua Fetch API.</p>
+        <div class="tech-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">REST API</span>
+        </div>
+    </div>
+
+</div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">Training Journey Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-modal-trigger="0">
+                <img src="/img/exp/chauvanliem-hs.jpg" alt="THPT Châu Văn Liêm">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="1">
+                <img src="/img/exp/chauvanliem-gv.jpg" alt="THPT Châu Văn Liêm">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="2">
+                <img src="/img/exp/THPT%20THSP.jpg" alt="THPT Thực hành Sư phạm">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="3">
+                <img src="/img/exp/nguyenvantay.jpg" alt="THPT Nguyễn Văn Tây">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="4">
+                <img src="/img/exp/longtuyen.jpg" alt="THCS Long Tuyền">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="5">
+                <img src="/img/exp/lytutrong.jpg" alt="THPT Lý Tự Trọng">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="6">
+                <img src="/img/exp/nguyenvietdung.jpg" alt="THPT Nguyễn Việt Dũng">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="7">
+                <img src="/img/exp/thptkhanhhoa.jpg" alt="THPT Khánh Hòa">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="8">
+                <img src="/img/exp/thptkhanhhoa2.jpg" alt="THPT Khánh Hòa">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="9">
+                <img src="/img/exp/trandainghia.jpg" alt="THPT Trần Đại Nghĩa">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="10">
+                <img src="/img/exp/vothanhtrinh.jpg" alt="THPT Võ Thành Trinh">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-modal-trigger="11">
+                <img src="/img/exp/vothanhtrinh2.jpg" alt="THPT Võ Thành Trinh">
+                <div class="gallery-overlay">
+                    <span>Click to view</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="">
+                <div class="modal-info">
+                    <h3 id="modalTitle">Title</h3>
+                    <p id="modalDescription">Description</p>
+                </div>
+            </div>
+            <div class="modal-nav">
+                <button class="modal-prev">← Previous</button>
+                <button class="modal-next">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-details">
+                <p><strong>Email:</strong> manhtran12a1@gmail.com</p>
+                <p><strong>Phone:</strong> 0826964252</p>
+                <p><strong>Address:</strong> Mạc Cửu Ward, Vĩnh Thanh, Rạch giá, An Giang, Vietnam</p>
+            </div>
+            <div class="input">
+                <input type="email" placeholder="email@example.com">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="btn">Send Message</div>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+        <p class="copyright">&copy;All rights reserved | Manh Tran</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
