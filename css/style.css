@@ -315,24 +315,70 @@ section {
   gap: 2rem;
   margin-top: 5rem;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
 .input-box input { 
   border-radius: 3rem;
   border: 2px solid black;
-  padding: 2rem 8rem;
-  font-size: 3rem;
+  padding: 1.5rem 3rem 1.5rem 5rem;
+  font-size: 1.1rem;
+  width: 100%;
+  font-family: "Noto Sans", sans-serif;
+  transition: 0.3s ease-in-out;
 }
-.input-box input::placeholder {
-font-size: 3rem;
+
+.input-box textarea {
+  border-radius: 2rem;
+  border: 2px solid black;
+  padding: 1.5rem 3rem 1.5rem 5rem;
+  font-size: 1.1rem;
+  width: 100%;
+  font-family: "Noto Sans", sans-serif;
+  resize: vertical;
+  transition: 0.3s ease-in-out;
 }
+
+.input-box input:focus,
+.input-box textarea:focus {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.02);
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  font-size: 1rem;
+  color: #999;
+}
+
 .input{
   position: relative;
+  display: flex;
+  align-items: center;
 }
+
 .input i{
   position: absolute;
-  font-size: 4rem;
-  top: 50%;
-  left: 10px;
-  transform: translate(50%,-50%);
+  font-size: 1.5rem;
+  left: 1.5rem;
+  pointer-events: none;
+  color: #666;
+}
+
+.contact-form .btn {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 300px;
+  align-self: center;
 }
 
 /* --- GALLERY STYLES --- */
@@ -583,15 +629,13 @@ footer ul li a{
   .experience-info{
     flex-direction: column;
   }
-  .input-box input{
-    padding: 2rem 5rem;
-    font-size: 2.5rem;
+  .input-box input,
+  .input-box textarea {
+    padding: 1.2rem 2.5rem 1.2rem 4rem;
+    font-size: 1rem;
   }
-  input input::placeholder {
-    font-size: 2.5rem;
-  }
-  .input-box i{
-    font-size: 2.5rem;
+  .input i{
+    font-size: 1.3rem;
   }
 }
 
@@ -609,15 +653,17 @@ footer ul li a{
   .about-container{
     flex-direction: column;
   }
-  .input-box input{
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
+  .input-box input,
+  .input-box textarea {
+    padding: 1rem 2rem 1rem 3.5rem;
+    font-size: 0.95rem;
   }
-  .input-box input::placeholder {
-    font-size: 1.5rem;
+  .input-box input::placeholder,
+  .input-box textarea::placeholder {
+    font-size: 0.9rem;
   }
-  .input-box i{
-    display: none;
+  .input i{
+    font-size: 1.2rem;
   }
   .grid { 
     grid-template-columns: repeat(1, 1fr);
@@ -662,13 +708,22 @@ footer ul li a{
   .about-container img {
     width: 80vw;
   }
-  .input-box input{
-    padding: 0.5rem 3rem;
-    width: 80%;
-    font-size: 1.5rem;
+  .input-box input,
+  .input-box textarea {
+    padding: 0.8rem 1.5rem 0.8rem 3rem;
+    font-size: 0.9rem;
+    width: 90%;
   }
-  .input-box input::placeholder {
-    font-size: 1.5rem;
+  .input-box input::placeholder,
+  .input-box textarea::placeholder {
+    font-size: 0.85rem;
+  }
+  .input i {
+    font-size: 1rem;
+  }
+  .contact-form .btn {
+    width: 90%;
+    padding: 0.8rem 1.5rem;
   }
 
   footer ul{

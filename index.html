@@ -38,7 +38,9 @@
                     <a href="./downloads/ManhCV.docx" download>
                         <button class="btn">Download CV</button>
                     </a>
-                    <button class="btn">Contact</button>
+                    <a href="#contact">
+                        <button class="btn">Contact</button>
+                    </a>
                 </div>
                 <div class="socials">
                     <a href="https://github.com/manhtran12a1"><i class="fa-brands fa-github"></i></a>
@@ -229,11 +231,25 @@
                 <p><strong>Phone:</strong> 0826964252</p>
                 <p><strong>Address:</strong> Mạc Cửu Ward, Vĩnh Thanh, Rạch giá, An Giang, Vietnam</p>
             </div>
-            <div class="input">
-                <input type="email" placeholder="email@example.com">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="btn">Send Message</div>
+            <form class="contact-form">
+                <div class="input">
+                    <input type="text" placeholder="Your Name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input">
+                    <input type="email" placeholder="Your Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Subject" required>
+                    <i class="fa-solid fa-heading"></i>
+                </div>
+                <div class="input">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <i class="fa-solid fa-message"></i>
+                </div>
+                <button class="btn" type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
