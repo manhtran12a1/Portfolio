@@ -137,3 +137,50 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+// --- CONTACT FORM ---
+/*function checkRateLimit() {
+    const key = 'contact_submissions';
+    const limit = 3;
+    const window_ms = 60 * 60 * 1000;
+    const data = JSON.parse(localStorage.getItem(key) || '{"count":0,"timestamp":0}');
+    const now = Date.now();
+    if (now - data.timestamp > window_ms) { data.count = 0; data.timestamp = now; }
+    if (data.count >= limit) return false;
+    data.count++;
+    localStorage.setItem(key, JSON.stringify(data));
+    return true;
+}*/
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Honeypot check
+    if (document.querySelector('[name="honeypot"]').value !== '') return;
+
+    // Rate limit check
+/*    if (!checkRateLimit()) {
+        alert('Too many submissions. Please try again later.');
+        return;
+    }
+*/
+    const btn = document.getElementById('contactBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const serviceID = 'default_service';
+    const templateID = 'template_zbynpyh';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            btn.textContent = 'Sent!';
+            this.reset();
+            setTimeout(() => {
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+            }, 3000);
+        }, (err) => {
+            btn.textContent = 'Send Message';
+            btn.disabled = false;
+            alert('Failed to send: ' + JSON.stringify(err));
+        });
+});

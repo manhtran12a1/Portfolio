@@ -6,6 +6,12 @@
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    emailjs.init("6CWaQXODbow9Yf1vp"); // Public Key 
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <!-- Google Analytics -->
 </head>
 <body>
 
@@ -228,28 +234,33 @@
             <h2 class="section-title">Contact Me</h2>
             <div class="contact-details">
                 <p><strong>Email:</strong> manhtran12a1@gmail.com</p>
-                <p><strong>Phone:</strong> 0826964252</p>
                 <p><strong>Address:</strong> Mạc Cửu Ward, Vĩnh Thanh, Rạch giá, An Giang, Vietnam</p>
             </div>
-            <form class="contact-form">
-                <div class="input">
-                    <input type="text" placeholder="Your Name" required>
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="input">
-                    <input type="email" placeholder="Your Email" required>
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="input">
-                    <input type="text" placeholder="Subject" required>
-                    <i class="fa-solid fa-heading"></i>
-                </div>
-                <div class="input">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                    <i class="fa-solid fa-message"></i>
-                </div>
-                <button class="btn" type="submit">Send Message</button>
-            </form>
+<form class="contact-form" id="contactForm">
+    <!-- Honeypot anti-spam (ẩn với người dùng) -->
+    <div style="display:none; position:absolute; left:-9999px;">
+        <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="input">
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="input">
+        <input type="email" name="from_email" placeholder="Your Email" required>
+        <i class="fa-solid fa-envelope"></i>
+    </div>
+    <div class="input">
+        <input type="text" name="subject" placeholder="Subject" required>
+        <i class="fa-solid fa-heading"></i>
+    </div>
+    <div class="input">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <i class="fa-solid fa-message"></i>
+    </div>
+    <div class="g-recaptcha" data-sitekey="6Le3SQQtAAAAAB1R87INS_-haYC39PmftteGAiYo"></div>
+    <button class="btn" type="submit" id="contactBtn">Send Message</button>
+</form>
         </div>
     </section>
 
