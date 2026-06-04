@@ -151,6 +151,7 @@ section {
   font-weight: 500;
   text-wrap: nowrap;
   transition: 0.2s ease-in-out;
+  color: black;
 }
 .btn:hover {
   background-color: black;
