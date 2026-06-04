@@ -289,19 +289,20 @@ section {
     border-color: white;
     color: white;
 }
-/* .project-card img{
+ /*.project-card img{
   width: 20vw;
   border-radius: 1rem;
-}
+}*/
 .project-card:hover .btn{
-  border: 2px solid white;
+  border: 4px solid white;
+  background-color: black;
   color: white;
 }
 .project-card:hover .btn:hover{
   border: 2px solid white;
   background-color: white;
   color: black;
-} */
+} 
 .project-card h3{
   font-size: 2rem;
   font-weight: 500;
