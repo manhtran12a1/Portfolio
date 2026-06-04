@@ -138,9 +138,9 @@ document.addEventListener('keydown', (e) => {
     }
 });
 // --- CONTACT FORM ---
-/*function checkRateLimit() {
+function checkRateLimit() {
     const key = 'contact_submissions';
-    const limit = 3;
+    const limit = 10;
     const window_ms = 60 * 60 * 1000;
     const data = JSON.parse(localStorage.getItem(key) || '{"count":0,"timestamp":0}');
     const now = Date.now();
@@ -149,7 +149,7 @@ document.addEventListener('keydown', (e) => {
     data.count++;
     localStorage.setItem(key, JSON.stringify(data));
     return true;
-}*/
+}
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -158,11 +158,11 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     if (document.querySelector('[name="honeypot"]').value !== '') return;
 
     // Rate limit check
-/*    if (!checkRateLimit()) {
+    if (!checkRateLimit()) {
         alert('Too many submissions. Please try again later.');
         return;
     }
-*/
+
     const btn = document.getElementById('contactBtn');
     btn.textContent = 'Sending...';
     btn.disabled = true;
@@ -183,4 +183,30 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             btn.disabled = false;
             alert('Failed to send: ' + JSON.stringify(err));
         });
+});
+
+// reCAPTCHA check
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert('Please complete the reCAPTCHA verification.');
+        return;
+    }
+
+// --- RENDER EMAIL ---
+window.addEventListener('DOMContentLoaded', () => {
+    const encoded = 'bWFuaHRyYW4xMmExQGdtYWlsLmNvbQ==';
+
+    const el = document.getElementById('contact-email');
+    if (!el) return;
+
+    el.textContent = 'Click to reveal email';
+    el.style.cursor = 'pointer';
+
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = atob(encoded);
+        el.textContent = email;
+        el.href = 'mailto:' + email;
+        el.style.cursor = 'default';
+    }, { once: true }); // chỉ chạy 1 lần
 });
