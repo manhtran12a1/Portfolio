@@ -163,6 +163,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         return;
     }
 
+    // reCAPTCHA check
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert('Please complete the reCAPTCHA verification.');
+        return;
+    }
+
     const btn = document.getElementById('contactBtn');
     btn.textContent = 'Sending...';
     btn.disabled = true;
@@ -185,21 +192,14 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         });
 });
 
-// reCAPTCHA check
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-        alert('Please complete the reCAPTCHA verification.');
-        return;
-    }
-
-// --- RENDER EMAIL ---
+// --- RENDER EMAIL
 window.addEventListener('DOMContentLoaded', () => {
     const encoded = 'bWFuaHRyYW4xMmExQGdtYWlsLmNvbQ==';
 
     const el = document.getElementById('contact-email');
     if (!el) return;
 
-    el.textContent = 'Click to reveal email';
+    el.textContent = 'click to reveal email';
     el.style.cursor = 'pointer';
 
     el.addEventListener('click', (e) => {
